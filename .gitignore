@@ -9,3 +9,4 @@ dist
 .codex
 .idea
 output-sample
+exporters/go/aimcoach-exporter/.gocatche
