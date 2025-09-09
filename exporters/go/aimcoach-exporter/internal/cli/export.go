@@ -68,16 +68,15 @@ func runExport(args []string, g Global) int {
         return 0
     }
 
-    client := send.NewClient(cfg.APIEndpoint, cfg.APIToken)
+    client := send.NewClient(cfg.APIEndpoint)
     grouped := map[string][]model.NormalizedRecord{}
     for _, r := range all { grouped[r.Provider] = append(grouped[r.Provider], r) }
     for provider, recs := range grouped {
         path := "/ingest/" + strings.ToLower(provider)
-        if err := client.PostJSON(path, recs); err != nil {
+        if err := client.PostJSONAuth(path, recs); err != nil {
             log.Fatalf("send %s: %v", provider, err)
         }
         log.Printf("sent %d records to %s", len(recs), path)
     }
     return 0
 }
-
