@@ -8,3 +8,4 @@ dist
 *.db-*
 .codex
 .idea
+output-sample
