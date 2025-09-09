@@ -6,6 +6,7 @@ import (
     "time"
 
     "github.com/example/aimcoach-exporter/internal/config"
+    "github.com/example/aimcoach-exporter/internal/auth/tokenstore"
     logx "github.com/example/aimcoach-exporter/internal/log"
 )
 
@@ -19,7 +20,17 @@ func runStatus(args []string, g Global) int {
     fmt.Printf("api-endpoint: %s\n", cfg.APIEndpoint)
     fmt.Printf("log-level:   %s\n", g.LogLevel)
     fmt.Printf("time:        %s\n", time.Now().Format(time.RFC3339))
-    fmt.Println("token:       (not implemented yet)")
+    // Token state
+    store, _ := tokenstore.Open("auto")
+    if store != nil {
+        if tok, err := store.Get("default"); err == nil {
+            fmt.Printf("token:       access exp=%s refresh exp=%s\n", tok.AccessExpiry.Format(time.RFC3339), tok.RefreshExpiry.Format(time.RFC3339))
+        } else {
+            fmt.Println("token:       (no token stored)")
+        }
+    } else {
+        fmt.Println("token:       (store unavailable)")
+    }
     logx.Infof("status checked", map[string]any{"endpoint": cfg.APIEndpoint})
     return 0
 }
