@@ -1,7 +1,7 @@
 # 実装計画
 
-- [ ] 1. プロジェクト基盤とインフラストラクチャの構築
-- [ ] 1.1 Cloudflare Workers プロジェクトの初期化
+- [x] 1. プロジェクト基盤とインフラストラクチャの構築
+- [x] 1.1 Cloudflare Workers プロジェクトの初期化
   - discord-hono を使用した Discord Bot フレームワークの設定
   - TypeScript 設定と厳格な型チェックの有効化
   - Wrangler 設定ファイルとデプロイメント環境の構成
