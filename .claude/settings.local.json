@@ -19,7 +19,11 @@
       "Bash(tree:*)",
       "Bash(git init:*)",
       "WebFetch(domain:mastra.ai)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:discord-hono.luis.fun)",
+      "Bash(npm install:*)",
+      "Bash(npm test:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
