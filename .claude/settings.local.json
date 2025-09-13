@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git rm:*)",
+      "Bash(python -m pytest tests/test_llm_integration.py -v)",
+      "Bash(python -m pytest tests/test_discord_bot.py -v)",
+      "Bash(python -m pytest tests/test_dialogue_session.py -v)",
+      "Bash(python -m pytest tests/test_service_communication.py -v)",
+      "Bash(python -m pytest tests/test_security_access_control.py -v)",
+      "Bash(python -m pytest tests/test_privacy_protection.py -v)",
+      "Bash(python -m pytest tests/test_error_handling_logging.py -v)",
+      "Bash(python -m pytest tests/test_integration_final.py -v)",
+      "Bash(python -m pytest tests/ -v --tb=short)",
+      "Bash(find:*)",
+      "Bash(tree:*)",
+      "Bash(git init:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
