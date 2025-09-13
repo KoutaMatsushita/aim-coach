@@ -13,15 +13,21 @@ name = "aim-coach-discord-bot-staging"
 name = "aim-coach-discord-bot-prod"
 
 # Environment variables (set via wrangler secret)
-# Required for discord-hono:
-# DISCORD_TOKEN
-# DISCORD_PUBLIC_KEY
-# DISCORD_APPLICATION_ID
+# Discord Bot Configuration:
+# wrangler secret put DISCORD_TOKEN
+# wrangler secret put DISCORD_PUBLIC_KEY
+# wrangler secret put DISCORD_APPLICATION_ID
 #
-# Required for AimCoach services:
-# ANALYTICS_ENGINE_URL
-# CONVERSATION_ENGINE_URL
-# INTERNAL_API_TOKEN
+# External Service URLs:
+# wrangler secret put ANALYTICS_ENGINE_URL
+# wrangler secret put CONVERSATION_ENGINE_URL
+#
+# Internal API Authentication:
+# wrangler secret put INTERNAL_API_TOKEN
+#
+# Development URLs (examples):
+# ANALYTICS_ENGINE_URL=https://analytics.aim-coach-dev.workers.dev
+# CONVERSATION_ENGINE_URL=https://conversation.aim-coach-dev.workers.dev
 
 # Durable Objects binding
 [[durable_objects.bindings]]

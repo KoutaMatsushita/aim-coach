@@ -37,13 +37,18 @@ npm install
 2. Set up environment variables:
 ```bash
 # Copy example configuration
-cp wrangler.toml.example wrangler.toml
+cp .env.example .env
 
-# Set secrets
+# Set all required secrets for Cloudflare Workers
 wrangler secret put DISCORD_TOKEN
 wrangler secret put DISCORD_PUBLIC_KEY
 wrangler secret put DISCORD_APPLICATION_ID
+wrangler secret put ANALYTICS_ENGINE_URL
+wrangler secret put CONVERSATION_ENGINE_URL
+wrangler secret put INTERNAL_API_TOKEN
 ```
+
+3. Configure Durable Objects and KV bindings (automatic via wrangler.toml)
 
 3. Register Discord commands:
 ```bash
