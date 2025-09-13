@@ -25,7 +25,8 @@
       "Bash(npm test:*)",
       "Bash(git checkout:*)",
       "Bash(git push:*)",
-      "Bash(git rebase:*)"
+      "Bash(git rebase:*)",
+      "Bash(EDITOR='sed -i \"\"s/^pick/reword/g\"\"' git rebase -i HEAD~9)"
     ],
     "deny": [],
     "ask": []
