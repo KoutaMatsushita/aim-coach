@@ -122,3 +122,11 @@ export enum ErrorCode {
   INVALID_COMMAND_PARAMETERS = 'INVALID_COMMAND_PARAMETERS',
   USER_NOT_FOUND = 'USER_NOT_FOUND',
 }
+
+/**
+ * Discord Hono context type
+ */
+export interface DiscordHonoContext {
+  env: Env;
+  res: (content: string) => Response;
+}
