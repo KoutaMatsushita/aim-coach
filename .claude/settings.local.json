@@ -26,7 +26,8 @@
       "Bash(git checkout:*)",
       "Bash(git push:*)",
       "Bash(git rebase:*)",
-      "Bash(EDITOR='sed -i \"\"s/^pick/reword/g\"\"' git rebase -i HEAD~9)"
+      "Bash(EDITOR='sed -i \"\"s/^pick/reword/g\"\"' git rebase -i HEAD~9)",
+      "Bash(GIT_EDITOR='sed -i \"\"s/pick 223adcf.*/reword 223adcf chore: git push権限をClaude Code設定に追加/\"\"' git rebase -i HEAD~3)"
     ],
     "deny": [],
     "ask": []
