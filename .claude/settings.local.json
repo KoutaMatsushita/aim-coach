@@ -23,7 +23,8 @@
       "WebFetch(domain:discord-hono.luis.fun)",
       "Bash(npm install:*)",
       "Bash(npm test:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
