@@ -17,7 +17,10 @@ Kiro-style Spec Driven Development implementation using claude code slash comman
 ### Active Specifications
 - Check `.kiro/specs/` for active specifications
 - Use `/kiro:spec-status [feature-name]` to check progress
-- `aim-coach-discord-bot`: AimLabとKovaaaksからスコアを読み取り、適切なアドバイス・トレーニングを提案するDiscord bot
+- `discord-bot-interface`: Cloudflare Workers上で動作するDiscord Bot（スラッシュコマンド、メンション処理、セッション管理）
+- `analytics-engine`: Gemini APIとCloudflare D1ベースのスコア分析エンジン（パーソナライズされたアドバイス生成）
+- `data-collector`: WindowsローカルのAimLab/Kovaaaksスコア収集とクラウド同期システム（冪等性、ユーザー紐づけ）
+- `conversation-engine`: Gemini APIベースのLLM対話エンジン（スコア・履歴考慮、discord-bot-interface連携）
 
 ## Development Guidelines
 - Think in English, but generate responses in Japanese (思考は英語、回答の生成は日本語で行うように)
@@ -54,9 +57,9 @@ Kiro-style Spec Driven Development implementation using claude code slash comman
 Managed by `/kiro:steering` command. Updates here reflect command changes.
 
 ### Active Steering Files
-- `product.md`: Always included - Product context and business objectives
-- `tech.md`: Always included - Technology stack and architectural decisions
-- `structure.md`: Always included - File organization and code patterns
+- `product.md`: Always included - Product context and business objectives ✅
+- `tech.md`: Always included - Technology stack and architectural decisions ✅
+- `structure.md`: Always included - File organization and code patterns ✅
 
 ### Custom Steering Files
 <!-- Added by /kiro:steering-custom command -->

@@ -17,7 +17,9 @@
       "Bash(python -m pytest tests/ -v --tb=short)",
       "Bash(find:*)",
       "Bash(tree:*)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "WebFetch(domain:mastra.ai)",
+      "WebFetch(domain:github.com)"
     ],
     "deny": [],
     "ask": []

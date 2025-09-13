@@ -28,3 +28,5 @@ temp/
 # Development
 *.tmp
 *.bak
+
+output-sample
